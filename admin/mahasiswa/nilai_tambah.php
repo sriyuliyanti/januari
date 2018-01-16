@@ -12,7 +12,7 @@
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b> Tambah Data Nilai Mahasiswa</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" onclick='history.back()'>KEMBALI</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" onclick='history.back()'>Kembali</a>   
 
         </p>
       </div>
@@ -21,6 +21,7 @@
 <?php
 include ('crudMahasiswa.php');
 include ('crudNilai.php');
+include_once('../cekadmin.php');
 
 $nim = $_GET['nim'];
 $data = cariMahasiswa($nim);

@@ -1,5 +1,4 @@
 <?php
-
 $error=''; 
 
 require_once "koneksi.php";
@@ -43,7 +42,7 @@ if(isset($_POST['submit']))
         }
         else
         {
-            $error = "Failed Login";
+            $error = "Gagal Login";
         }
     }
 }           

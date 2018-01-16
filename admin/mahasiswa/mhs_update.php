@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once('../cekadmin.php');
+?>
 <html>
     <head>
         <title>Form Update Data Mahasiswaa</title>
@@ -12,7 +15,7 @@
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b>Form Update Data Mahasiswa</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="mhs_tampil.php">KEMBALI</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="mhs_tampil.php">Kembali</a>   
 
         </p>
       </div>

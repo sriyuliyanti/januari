@@ -1,13 +1,6 @@
 <?php
-session_start();
-
-//cek apakah user sudah login
-if(!isset($_SESSION['username'])){
-    header('Location:../../index.php');
-}
+include_once('../cekadmin.php');
 ?>
-
-
 
 <!doctype html>
 <html>
@@ -23,7 +16,7 @@ if(!isset($_SESSION['username'])){
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b>Daftar Wali</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">KEMBALI</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">Dasboard</a>   
 
         </p>
       </div>

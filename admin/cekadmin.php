@@ -3,7 +3,8 @@ session_start();
 
 //cek apakah user sudah login
 if(!isset($_SESSION['username'])){
-    header('Location:index.php');
+	echo "anda belum login";
+    header('Location:../index.php');
 }
 
 

@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once('../cekadmin.php');
+?>
 <html>
     <head>
         <title>Daftar Mahasiswa</title>
@@ -36,12 +39,12 @@ $hapus = 1;
               <table id="mahasiswa" class="table table-striped table-bordered" >
                 <thead>
                     <tr>
-                        <th width="10%">NOMOR</th>
-                        <th width="15%">NIM</th>
+                        <th width="5%">NOMOR</th>
+                        <th width="10%">NIM</th>
                         <th width="15%">NAMA DOSEN</th>
-                        <th width="15%">NAMA MAHASISWA</th>
-                        <th width="15%">TAHUN MASUK</th>
-                        <th width="5%">STATUS</th>
+                        <th width="20%">NAMA MAHASISWA</th>
+                        <th width="10%">TAHUN MASUK</th>
+                        <th width="15%">STATUS</th>
                         <th width="20%">AKSI</th>
                     </tr>
                 </thead>
@@ -57,7 +60,7 @@ $hapus = 1;
 					if(mysqli_num_rows($hasil) > 0){
 					$no = 1;
 						while ($r = mysqli_fetch_array($hasil)) {
-                                     
+                    $nim = $r['nim'] ;
                     ?>
 
                     <tr align='left'>
@@ -80,7 +83,7 @@ $hapus = 1;
                         <td>
                             <a button type="button" class="btn btn-primary" href="nilai_permhs.php?nim=<?php echo  $r['nim']; ?>">Detail  </a>
                             <a button type="button" class="btn btn-warning" href="mhs_update.php?nim=<?php echo  $r['nim']; ?>">Update</a>  
-                            <a button type="button" class="btn btn-danger" href="mhs_hapus.php?nim=<?php echo  $r['nim']; ?>" >Delete</a>
+                            <a button type="button" class="btn btn-danger" href="mhs_hapus.php?nim=<?php echo  $r['nim']; ?>" onClick="return confirm(\"Yakin Akan Menghapus $nim ? \')" >Delete</a>
                         </td>
                     </tr>
                     <?php

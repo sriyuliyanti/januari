@@ -1,8 +1,6 @@
 <?php
-include('crudNilai.php');
-$update = $_POST['update'];
-
-if($update == 'update'){
+include('../../koneksi.php');
+$conn = koneksi();
 	$nim 		= $_POST['nim'];
 	$id_nilai 	= $_POST['id_nilai'];
 	$semester 	= $_POST['semester'];
@@ -40,9 +38,18 @@ if($update == 'update'){
 		exit;	// program berhenti
 	}
 
-	
-$hasil = ubahNilai($id_nilai, $nim, $semester, $sks, $ips);
-header("Location: nilai_permhs.php?nim=$nim");
+$hasil =mysqli_query($conn, "UPDATE nilai_semester
+		  SET semester  ='$semester' , 
+          sks       ='$sks', 
+          ips       = '$ips'
+		  WHERE id_nilai='$id_nilai'");
+		  
+if($hasil > 0) {
+	echo "<div class='alert alert-success' role='alert'>BERHSIL UPDATE DATA</div>";
+	header("Location: nilai_permhs.php?nim=$nim");
+	}
+else {echo 'gagal update data Nilai Mahasiswa' . mysqli_error($conn); }
 
-}
+
+
 ?>

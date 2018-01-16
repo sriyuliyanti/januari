@@ -1,6 +1,6 @@
 <?php
 include ('crudNilai.php');
-
+include_once('../cekadmin.php');
 $id_nilai = $_GET['id_nilai'];
 $data = cariNilai($id_nilai);
 ?>

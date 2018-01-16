@@ -1,35 +1,5 @@
 <?php
 require_once '../../koneksi.php';
-
-// jika berhasil, hasil array dr baris-baris data
-// dan setiap baris data berupa array dari nama-nama field
-// jika tidak ada, hasil berupa nilai null
-
-function bacaMahasiswa($sql){
-  $data = array();
-  $koneksi = koneksi();
-  $hasil = mysqli_query($koneksi, $sql);
-  // jika tidak ada record, hasil berupa null
-  if (mysqli_num_rows($hasil) == 0) {
-	mysqli_close($koneksi);
-	return null;  
-  }
-  $i=0;
-  while($baris = mysqli_fetch_assoc($hasil)){
-	$data[$i]['nim']		= $baris['nim'];
-	$data[$i]['id_wali']	= $baris['id_wali'];
-	$data[$i]['nama_wali']	= $baris['nama_wali'];
-	$data[$i]['nama_mhs'] 	= $baris['nama_mhs'];
-	$data[$i]['th_masuk'] 	= $baris['th_masuk'];
-	$data[$i]['status'] 	= $baris['status'];
-
-	$i++;
-  }
-  mysqli_close($koneksi);
-  return $data;
-}
-
-
 // menambahkan data ke tabel mahasiswa
 
 function tambahMahasiswa($nim, $id_wali, $nama_mhs, $th_masuk, $status){

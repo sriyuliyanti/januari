@@ -1,4 +1,5 @@
 <?php
+include_once('../cekadmin.php');
 include ('crudUser.php');
 
 $id_user = $_GET['id_user'];
@@ -19,7 +20,7 @@ $data = cariUser($id_user);
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b>Form Update Data user</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">KEMBALI</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">Dasboard</a>   
 
         </p>
       </div>

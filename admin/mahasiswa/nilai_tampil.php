@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once('../cekadmin.php');
+?>
 <html>
     <head>
         <title>Daftar Nilai</title>

@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once('../cekadmin.php');
+?>
 <html>
     <head>
         <title>Daftar Nilai Mahasiswa</title>
@@ -12,8 +15,8 @@
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b>Daftar Nilai per Mahasiswa</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" onload='history.back()'>Kembali</a>   
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="mhs_tampil.php">Dasboard</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" onclick='history.back()'>Kembali</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">Dasboard</a>   
 
 
         </p>

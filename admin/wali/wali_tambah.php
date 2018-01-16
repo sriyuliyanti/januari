@@ -1,3 +1,7 @@
+<?php
+include_once('../cekadmin.php');
+?>
+
 <html>
     <head>
         <title>Tambah Dosen Wali</title>

@@ -32,7 +32,7 @@
                         <th width="15%">NAMA MAHASISWA</th>
                         <th width="15%">TAHUN MASUK</th>
 						<th width="15%">STATUS KELULUSAN</th>
-                        <th width="15%">AKSI</th>
+                        <th width="5%">AKSI</th>
                  
                     </tr>
                 </thead>
@@ -71,7 +71,7 @@
                         <td><?php echo  $status; ?></td>
                         <td>
                             <a button type="button" class="btn btn-primary" href="../mahasiswa/nilai_permhs.php?nim=<?php echo  $r['nim']; ?>">Detail  </a>
-                            <a button type="button" class="btn btn-warning" href="prediksi_input.php?nim=<?php echo  $r['nim']; ?>">Prediksi</a>  
+                            
                         </td>
                     </tr>
 					<?php

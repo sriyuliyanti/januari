@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+include_once('../cekadmin.php');
+?>
 <html>
     <head>
         <title>Form Input Data User</title>
@@ -12,7 +15,7 @@
           <a class="navbar-brand" href="#" style="color: white;" align="center"><b>Form Input Data User</b></a>
         </div>
         <p class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px;">
-        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">KEMBALI</a>   
+        <a class="navbar-text navbar-right hidden-xs" style="color: white;padding-right: 10px" href="../halaman_admin.php">Dasboard</a>   
 
         </p>
       </div>
