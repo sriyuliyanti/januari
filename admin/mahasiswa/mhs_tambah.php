@@ -68,7 +68,7 @@
         </div>
      </div>
      <label class="control-label col-sm-5" ></label>
-      <button type="submit" class = class="btn btn-success">Simpan</button>
+      <button type="submit" class="btn btn-success">Simpan</button>
       <button type="reset" class="btn btn-danger" >Reset</button>
     </form>  
   </div>

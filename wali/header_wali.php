@@ -51,7 +51,7 @@ if(!isset($_SESSION['username'])){
 				<li></i></li>
 				<li><a href="halaman_wali.php"> Dasboard</a></li>
 				
-				<li><a href="ganti_pass.php"> Ubah Password</a></li>
+				<li><a href="update_pass.php"> Ubah Password</a></li>
 				
 				<li class="c2 dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown">Mahasiswa<span class="caret"></span></a>

@@ -12,7 +12,9 @@ include_once "header_mhs.php";
 										
                     $conn = koneksi(); 
 					$username = $_SESSION['username'];
-                    $sql  ="select * from mahasiswa where nim = '$username'";
+                    $sql  ="select * from mahasiswa inner join wali on 
+                    wali.id_wali = mahasiswa.id_wali 
+                    where nim = '$username'";
                     
 					$h = mysqli_query($conn, $sql);
 					 $r = mysqli_fetch_array($h) 
@@ -28,6 +30,9 @@ include_once "header_mhs.php";
 					<tr>
 						<th width="20%">TAHUN ANGKATAN</th>
 							<td width="20%"><?php echo  $r['th_masuk']; ?></td></tr>
+                    <tr>
+                        <th width="20%">DOSEN WALI</th>
+                            <td width="20%"><?php echo  $r['nama_wali']; ?></td></tr>
                     
 				</table>
 				<br/>

@@ -54,13 +54,13 @@ $proses 	= $_POST['simpan'];
 	}
 if ($proses == "simpan"){
 $sql1 = "insert into wali values('$id_wali', '$nama_wali')";
-$sql2 = "insert into user values('$nm_user', '$username', '$password', 3)";
+$sql2 = "insert into user(nm_user, username, password, level) values('$nm_user', '$username', '$password', 3)";
 }
 
 $hasil1 = mysqli_query($conn, $sql1);
 if ($hasil1 > 0){
 echo 'data Dosen berhasil disimpan';
-	//header("Location: wali_tampil.php");
+	header("Location: wali_tampil.php");
 }
 else {
 echo "Gagal Simpan, Silahkan Diulangi !<br/>".mysqli_error($conn);

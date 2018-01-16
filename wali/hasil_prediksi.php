@@ -11,7 +11,7 @@ include_once 'header_wali.php';
                         <th width="5%">NOMOR</th>
 						<th width="10%">NIM</th>
                         <th width="10%">NAMA MAHASISWA</th>
-                        <th width="10%">NILAI K</th>
+                        <th width="15%">JUMLAH TETANGGA TERDEKAT</th>
 						<th width="15%">HASIL PREDIKSI</th>
                         
                     </tr>
@@ -38,9 +38,15 @@ include_once 'header_wali.php';
                         <td><?php echo  $r['nim']; ?></td>
                         <td><?php echo  $r['nama_mhs']; ?></td>
                         <td><?php echo  $r['nilaiK']; ?></td>
-                        
-                        <td><?php echo  $r['hasil_prediksi']; ?></td>
-                        
+                        <?php if($r['hasil_prediksi'] == 'LC') {
+                                    $pred = 'Lulus Cepat'; }
+                                    else if ($r['hasil_prediksi'] == 'LT' ){
+                                    $pred = 'Lulus Tepat waktu'; }
+                                        else {
+                                        $pred ='Belum Terlambat';
+                                        }
+                                    ?>
+                        <td><?php echo  $pred; ?></td>
                         
                     </tr>
 					<?php

@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
     $username   = $_POST['username'];
 //	$nm_user    = $_POST['nm_user'];
     $password   = $_POST['password'];
-    $level      = $_POST['level'];
+    //$level      = $_POST['level'];
               
     $query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username' AND password='$password'");
     if(mysqli_num_rows($query) == 0)
@@ -143,7 +143,7 @@ if(isset($_POST['submit']))
         </div>
         <?php
 		}
-		else if($row['level'] == "4" && $level=="4")
+		else if($row['level'] == "4")
         {
 		?>
 			<div class="navbar-collapse collaps" id="bs-example-navbar-collapse-1">

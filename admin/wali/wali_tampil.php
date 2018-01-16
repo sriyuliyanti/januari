@@ -40,10 +40,10 @@ $hapus = 1;
  <table id="wali" class="table table-striped table-bordered" >
                 <thead>
                     <tr>
-                        <th width="10%">NOMOR</th>
-                        <th width="15%">NIP DOSEN WALI</th>
+                        <th width="5%">NOMOR</th>
+                        <th width="10%">NIP DOSEN WALI</th>
                         <th width="15%">NAMA DOSEN WALI</th>
-                        <th width="15%">AKSI</th>
+                        <th width="5%">AKSI</th>
                  
                     </tr>
                 </thead>
@@ -67,7 +67,7 @@ $hapus = 1;
                         <td><?php echo  $r['id_wali']; ?></td>
                         <td><?php echo  $r['nama_wali']; ?></td>
                         <td>
-                          <a button type="button" class="btn btn-primary" href="wali_update.php?id_wali=<?php echo  $r['id_wali']; ?>">Update</a> | 
+                          <a button type="button" class="btn btn-primary" href="wali_update.php?id_wali=<?php echo  $r['id_wali']; ?>">Update</a> 
                           <a button type="button" class="btn btn-danger" href="wali_hapus.php?id_wali=<?php echo  $r['id_wali']; ?>" >Delete</a>
                         </td>
                     </tr>

@@ -70,11 +70,7 @@
     $LC1=mysqli_query($koneksi,"SELECT A.Status_Lulus,COUNT(A.Nilai) Nilai 
     FROM (SELECT Status_lulus,Status_lulus Nilai FROM RangkingSementara ORDER BY Jarak ASC LIMIT ".$nilaik." )A  WHERE A.Status_Lulus='LC'
     GROUP BY Status_Lulus");
-
-
-
-
-    
+  
     
     if (mysqli_num_rows($LT1)!=0){
     while ($LT=mysqli_fetch_assoc($LT1)){
@@ -105,7 +101,7 @@
       <tr>
         <th>NIM</th>
         <th>Nama Mahasiswa</th>
-        <th>Nilai K </th>
+        <th>Jumlah tetangga Terdekat</th>
         <th>KESIMPULAN</th>
       </tr>
     </thead>
